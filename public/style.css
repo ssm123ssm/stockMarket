@@ -1,0 +1,29 @@
+body {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.stocks {
+
+    box-shadow: 5px 5px 10px 1px;
+    border-left: 5px solid #00a7ff;
+    height: 120px;
+}
+
+.new {
+    background-color: #009dff;
+}
+
+#sym {
+    padding-left: 5px;
+}
+
+.notFound {
+    border: 1px solid red;
+    padding: 10px;
+    max-width: 500px;
+    margin: auto;
+    background-color: rgba(211, 80, 80, 0.22);
+    border-radius: 10px;
+    display: none;
+}

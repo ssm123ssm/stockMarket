@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chart the stock market</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="animate.css">
+    <script src="jquery.js"></script>
+    <script src="tether.min.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="Chart.js"></script>
+    <script src="angular.js"></script>
+    <script src="angular-route.js"></script>
+
+</head>
+
+<body ng-app='myApp' ng-controller='ctrl'>
+
+    <div class="container">
+        <h3 class="display-3 text-center mt-5 mb-5"> Chart the Stock Market</h3>
+
+    </div>
+
+    <div class="container-fluid">
+
+        <div class="notFound text-center mb-4">The stock symbol you enter does not exist...</div>
+
+        <canvas id="myChart" class="info" width="400" height="400"></canvas>
+        <div class="row justify-content-start mt-4 mb-4">
+            <div class='col-6 col-md-3 mb-2' ng-repeat='item in stocks'>
+
+                <div class="stocks info text-center p-3 mt-3" nop>
+                    <b>{{item.name}}</b>
+                    <button type="button" class="btn btn-sm btn-block mt-4" ng-click="remove(item)">Remove</button>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="row justify-content-center mt-5 mb-2">
+            <div class="stocks new text-center p-3 col-6 col-md-6">
+                Add SYM<br>
+                <input type="text" id='sym' class="form-control" placeholder="SYM">
+                <button type="button" id='add' class="btn btn-sm btn-block mt-1">Add</button>
+            </div>
+        </div>
+        <div class="text-center mt-3 mb-2">created by ssm123ssm</div>
+
+    </div>
+
+
+
+    <script src="socket.io.js"></script>
+    <script src="/main.js"></script>
+</body>
+
+</html>
